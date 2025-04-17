@@ -17,3 +17,5 @@ Automated deployment pipeline using GitHub Actions and Terraform for AWS.
 2. Add your AWS secrets.
 3. Push your changes.
 4. GitHub Actions will handle testing and deployment!
+
+echo "# Version update"
