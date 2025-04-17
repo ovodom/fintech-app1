@@ -25,6 +25,11 @@ jobs:
       - name: Run Unit Tests
         run: pytest
 
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.6.6  # or whichever version you want
+
       - name: Terraform Init
         run: terraform init
         working-directory: ./terraform
@@ -35,3 +40,4 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
